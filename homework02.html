@@ -1,90 +1,224 @@
-<!DOCTYPE html>
+
 <html>
-<body>
-
-<form action="/action_page.php">
-臺北市立聯合醫院
-  <select name="院區">
-    <option value="中興-院本部">中興-院本部</option>
-    <option value="忠孝">忠孝</option>
-    <option value="仁愛">仁愛</option>
-    <option value="陽明">陽明</option>
-    <option value="松德">松德</option>
-    <option value="和平婦幼">和平婦幼</option>
-    <option value="林森中醫昆明">林森中醫昆明</option>
-  </select>
-  院區
-</form>
-
-<h2>住院營養照護病例紀錄表(N)</h2>
-
-<form>
-● 營養評估
-</form>
-
-1. 入院診斷：
-<form action="/action_page.php">
-
-  <textarea name="message" rows="1
-  
-  " cols="80"></textarea>
-   <input type="submit">
-  <br>
+<head>
+    <meta charset="utf-8">
+	<body background="https://img.freepik.com/free-photo/blue-watercolor-texture-background_24972-148.jpg?size=338&ext=jpg" >
+    <title>Form example</title>
  
-</form>
+</head>
+<body ">
+    <form id="orderForm1" action="http://203.64.84.113/x/RQ_RS.aspx" method="post"  name="form1" >
+     
+	 <p style="background-color:#FFF8DC;font-family:courier;text-align:center;font-size:100%">MI4A  104316113  李孟庭 網一作業2</p>
+ <img src="https://www.crazyvector.com/wp-content/uploads/2018/11/Medical-colorful-icons.jpg" width="150" height="100"style="float:right;"/>
 
-<form action="/action_page.php">
-入院日期：
-  <input type="date" name="bday">
-  <input type="submit">
-</form>
-2. 飲食醫囑：
-<form action="/action_page.php">
+ <h3><p style="color:		#D02090">臺北市立聯合醫院 </h3>
 
-  <textarea name="message" rows="1
+<select size="1" name="院區">
+            <option>中興-院本部</option>
+            <option>忠孝</option>
+            <option>仁愛</option>
+            <option>陽明</option>
+			<option>松德</option>
+            <option>和平婦幼</option>
+			<option>林森中醫昆明</option>
+            </select>
+<h3><p style="color:		#D02090">院區 </h3>	
+
+	<h2><p style="color:	#8B0000;text-align:center">住院營養照護病例紀錄表(N)</h2>
+
+
+ <h4><p style="color:	#800000;text-align:center">營養評估 </h4>
+	
+	<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid 	#FFFFF0;
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #FAFAD2;
+}
+</style>
+<table>
+</tr>
+ 
+  <tr>
+
+	<th>入院診斷<input type="text"  name="入院診斷" size="40"></tr>
+    
+  <tr>
+  	<th>入院日期<input type="date" name="入院日期"></th>
+
+  </tr>
+   
+  <tr>
+
+  	<th>飲食醫囑<input type="text"  name="飲食醫囑" size="40"></th>
+  </tr><tr>
+
+  	<th>個人史<input type="text"  name="個人史" size="42"></th>
+  </tr><tr>
+
+  	<th>身高 / 體重<input type="text"  name="身高 / 體重" size="38">KH</th>
+	 </tr>
+	  	<th>體重變化 +/-<input type="text"  name="體重變化" size="36">公斤</th>
+  </tr>
   
-  " cols="80"></textarea>
-   <input type="submit">   
-  <br>
-</form>
-
-<input type="checkbox" value="1" name="NPO"> NPO<br>
-
-3. 個人史：
-<form action="/action_page.php">
-
-
-  <textarea name="message" rows="3
+  <th>體重變化 +/-<input type="text"  name="體重變化" size="36">公斤</th>
+  </tr>
   
-  " cols="80"></textarea>
-   <input type="submit">
-  <br>
-</form>
+ 
+</table>		
 
-4. 活動與表徵：
-<form action="/action_page.php">
+	
+ <br>活動表徵 <br>
+	<input type="checkbox" name="臥床">臥床
+	<input type="checkbox" name="可活動" >可活動
+	<input type="checkbox" name="水腫" >水腫
+	<input type="checkbox" name="痔瘡" >痔瘡
+	<br>
+        其它：<input type="text"  name="其它" size="20"><br />
+		<br>
+		
+		
+		<br>身體功能 <br>
+	<input type="checkbox" name="咀嚼">咀嚼
+	<input type="checkbox" name="吞嚥" >吞嚥
+	<input type="checkbox" name="胃 排空〈消化〉" >胃 排空〈消化〉
+	<input type="checkbox" name="腹脹" >腹脹
+		<input type="checkbox" name="便祕" >便祕
+		<input type="checkbox" name="腹瀉" >腹瀉
+	<br>
+        其它：<input type="text"  name="其它" size="20"><br />
+		<br>
 
-<input type="checkbox" value="1" name="臥床"> 臥床<br>
-<input type="checkbox" value="1" name="可活動"> 可活動<br>
-<input type="checkbox" value="1" name="水腫"> 水腫<br>
-<input type="checkbox" value="1" name="痔瘡"> 痔瘡<br>
-<input type="checkbox" value="1" name="其它"> 其它<br>
-<textarea cols="80" rows="1">
-</textarea>
-</form>
+  <br>給食途徑及方法 <br>
+	<input type="checkbox" name="ORAL">ORAL
+	<input type="checkbox" name="NG" >NG
+	<input type="checkbox" name="ND" >ND
+	<input type="checkbox" name="胃造口" >胃造口
+		<input type="checkbox" name="批式" >批式
+		<input type="checkbox" name="重力" >重力
+		<input type="checkbox" name="連續" >連續
+	<br>
+        速度：<input type="text"  name="速度" size="20">cc/hr<br />
+		<br>
+		
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-<form action="/action_page.php">
-  身高 / 體重=<br>
-  <input type="text"name="firstname" value="">
+td, th {
+  border: 1px solid 	#FFFFF0;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #FAFAD2;
+}
+</style>
+
+<h3 style="color:#B22222">藥物摘要</h3>
+</FONT></p>
+
+<table>
+</tr>
+ 
+  <tr>
+
+	<th><input type="text"  name="name" size="80"></th>
+  </tr>
+  <tr>
+
+  	<th><input type="text"  name="name" size="80"></th>
+
+  </tr>
   
-  KH<br>
-  <br>
-  BMI<br>
-  <input type="text" name="BMI" value="">
-  <br><br>
-  <input type="submit" value="Submit">
-</form> 
+  <tr>
+
+  	<th><input type="text"  name="name" size="80"></th>
+  </tr><tr>
+
+  	<th><input type="text"  name="name" size="80"></th>
+  </tr><tr>
+
+  	<th><input type="text"  name="name" size="80"></th>
+  </tr>
+</table>		
 
 
-</body>
+
+<h3 style="color:#B22222">檢驗摘要</h3>
+</FONT></p>
+
+<table>
+</tr>
+ 
+	<th><input type="date" name="檢驗摘要日期1"><input type="text"  name="name" size="45"></th>
+  </tr>
+  <tr>
+
+  	<th><input type="date" name="檢驗摘要日期2"><input type="text"  name="name" size="45"></th>
+
+  </tr>
+  
+  <tr>
+
+  	<th><input type="date" name="檢驗摘要日期3"><input type="text"  name="name" size="45"></th>
+  </tr><tr>
+
+  	<th><input type="date" name="檢驗摘要日期4"><input type="text"  name="name" size="45"></th>
+  </tr><tr>
+
+  	<th><input type="date" name="檢驗摘要日期5"><input type="text"  name="name" size="45"></th>
+  </tr>
+</table>
+
+
+<h3 style="color:#B22222">營養診斷</h3>
+</FONT></p>
+
+<table>
+</tr>
+ 
+  <tr>
+  <th>P</th>
+	<th><input type="text"  name="name" size="80"></th>
+  </tr>
+  <tr>
+  <th>E</th>
+  	<th><input type="text"  name="name" size="80"></th>
+
+  </tr>
+  <tr>
+  <th>S</th> 
+  	<th><input type="text"  name="name" size="80"></th>
+  </tr>
+</table>		
+		
+				
+		
+	<h5><p style="color:	#800000">訪視時間 </h5>	
+
+	<input type="date" name="訪視日期">
+		
+		
+        <button type="submit" value="sssss" style="height: 30px; width: 103px">表單送出</button>
+
+        </form>
+		
+		 <a href="http://keeper107.pixnet.net/blog/post/104070697-%E7%87%9F%E9%A4%8A%E8%A8%BA%E6%96%B7%E8%9E%8D%E5%85%A5%E7%87%9F%E9%A4%8A%E7%85%A7%E8%AD%B7%E6%B5%81%E7%A8%8B%E7%9A%84%E6%A8%A1%E5%BC%8F">此作業 表單來源</a>
+ </body>
 </html>
