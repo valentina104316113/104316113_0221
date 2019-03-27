@@ -42,7 +42,7 @@ tr:nth-child(even) {
 <table>
 <tr>
  <form action="/action_page.php" method="get">
-  <th>姓名(必填)</th> <th><input type="text" oninvalid="alert('姓名未填!!!');" name="fname" required></th>
+  <th>姓名(必填)</th> <th><input type="text" oninvalid="alert('姓名未填!!!');" name="姓名" required></th>
 
 </form>
 </tr>
@@ -50,14 +50,14 @@ tr:nth-child(even) {
 <tr>
 	
 	<th>手機號碼</th>
-	<th><input type=”text” onkeyup=”value=value.replace(/[^\d]/g,”) “onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^\d]/g,”))” /></th>
+	<th><input type=”text” onkeyup=”value=value.replace(/[^\d]/g,”) “onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^\d]/g,”))” required="required" /></th>
 
 	</tr>
  
 	
   <tr>
 	<th>入院診斷</th>
-	<th><input type="text"  name="入院診斷" size="100"></th>
+	<th><input type="text" required="required" name="入院診斷" size="100"></th>
 	</tr>
     
   <tr>
