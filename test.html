@@ -40,30 +40,24 @@ tr:nth-child(even) {
 }
 </style>
 
-<body>
-<form id="form1" name="form1" method="post" action="" onclick="return false">
-
 <table>
 <tr>
 
-
-
-
 	<th>姓名 (必填)</th>
 
-	<th><input name="text" id="text" type="text" required /></th>
+	<th><input name="姓名" id="姓名" type="text" required /></th>
 
 	</tr>
  
 <tr>
 	<th>連絡電話 - 室內電話 (必填)</th>
-	<th><input name="mobile" id="mobile" pattern=’\d{4}[-]\d{6}’ required /></th>
+	<th><input name="室內電話" id="mobile" pattern=’\d{4}[-]\d{6}’ required /></th>
 	</tr>	
 	
 	
 <tr>
 	<th>連絡電話 - 手機號碼 (必填)</th>
-	<th><input name="mobile" id="mobile" pattern=’\d{4}[-]\d{6}’ required /></th>
+	<th><input name="手機號碼" id="mobile" pattern=’\d{4}[-]\d{6}’ required /></th>
 	</tr>	
 	
 	
@@ -221,40 +215,11 @@ tr:nth-child(even) {
 <script type="text/javascript">
 function disp_alert()
 {
-alert("確認將表單送出嗎?")
+if(reg.姓名.value=="")
+alert("未輸入姓名")
+
 }
 </script>
-
-
-
-
-<script>
- $(document).ready(function(){
-    $("#button").click(function(){
-        if($("#name").val()==""){
-            alert("你尚未填寫姓名");
-            eval("document.form1['name'].focus()");       
-        }else if($("#phone").val()==""){
-            alert("你尚未填寫電話");
-            eval("document.form1['phone'].focus()");    
-        }else if($("#address").val()==""){
-            alert("你尚未填寫地址");
-            eval("document.form1['address'].focus()");       
-        }else{
-            document.form1.submit();
-        }
-    })
- })
-</script>
-
-
-
-
-
-
-
-
-
 
 
 </head>
