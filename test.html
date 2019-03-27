@@ -39,6 +39,10 @@ tr:nth-child(even) {
   background-color: #7FFFD4;
 }
 </style>
+
+<body>
+<form id="form1" name="form1" method="post" action="" onclick="return false">
+
 <table>
 <tr>
 
@@ -46,9 +50,9 @@ tr:nth-child(even) {
 
 
 	<th>姓名 (必填)</th>
-	[html]
+
 	<th><input name="text" id="text" type="text" required /></th>
-	[/html]
+
 	</tr>
  
 <tr>
@@ -95,7 +99,8 @@ tr:nth-child(even) {
   </tr>
  
 </table>	
-
+</form>
+</body>
 
 
 
@@ -219,6 +224,39 @@ function disp_alert()
 alert("確認將表單送出嗎?")
 }
 </script>
+
+
+
+
+<script>
+ $(document).ready(function(){
+    $("#button").click(function(){
+        if($("#name").val()==""){
+            alert("你尚未填寫姓名");
+            eval("document.form1['name'].focus()");       
+        }else if($("#phone").val()==""){
+            alert("你尚未填寫電話");
+            eval("document.form1['phone'].focus()");    
+        }else if($("#address").val()==""){
+            alert("你尚未填寫地址");
+            eval("document.form1['address'].focus()");       
+        }else{
+            document.form1.submit();
+        }
+    })
+ })
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
 <button type="submit"value="sssss" style="height: 30px; width: 103px"onclick="disp_alert()" value="output" />送出表單</button>
