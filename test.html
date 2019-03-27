@@ -39,37 +39,29 @@ tr:nth-child(even) {
   background-color: #7FFFD4;
 }
 </style>
-
-<head>
-
- <script type="text/javascript">
- function chk(){
-    if(document.send.姓名.value==''){
-      alert('姓名未填');
-      document.send.姓名.focus();
-      return false;
-    }
-    if(document.send.電話.value==''){
-      alert('電話未填');
-      document.send.電話.focus();
-      return false;
-    }
-    return true;
-  }
-
-
-</head>
-<body>
 <table>
 <tr>
 	<th>姓名(必填)</th>
-	<form action="" method="post" name="send" onsubmit="return chk();">
 	<th><input type="text" required="required" name="姓名" size="100"></th>
 	</tr>
  
+ <form action="/action_page.php" method="get">
+  <th>Name:</th> <th><input type="text" oninvalid="alert('You must fill out the form!');" name="fname" required></th>
+
+</form>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <tr>
 	<th>緊急連絡電話(必填)</th>
-	<form action="" method="post" name="send" onsubmit="return chk();">
 	<th><input type="text" required="required" name="電話" size="100"></th>
 	</tr>	
 	
@@ -103,8 +95,7 @@ tr:nth-child(even) {
 	<th><input type="text" required="required" name="體重變化" size="100">公斤</th>
   </tr>
  
-</table>
-</body>	
+</table>	
 <br> <br>	
 <br>營養知識 <br>
 	    <FONT size="3"><INPUT id="Radio1" type="radio" CHECKED value="y" name="差">佳
