@@ -41,59 +41,47 @@ tr:nth-child(even) {
 </style>
 <table>
 <tr>
- 
  <form action="/action_page.php" method="get">
   <th>姓名(必填)</th> <th><input type="text" oninvalid="alert('姓名未填!!!');" name="fname" required></th>
 
 </form>
-
+</tr>
 
 <tr>
+	
+	<th>手機號碼</th>
+	<th><input name="mobile" id="mobile" pattern=’\d{4}[-]\d{6}’ required /></th>
+	</tr>
  
- <form action="/action_page.php" method="get">
-  <th>緊急連絡電話(必填)</th> <th><input type="text" oninvalid="alert('電話未填!!!');" name="fphone" required></th>
-
-</form>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
   <tr>
-	<th>入院診斷(必填)</th>
-	<th><input type="text" required="required" name="入院診斷" size="100"></th>
+	<th>入院診斷</th>
+	<th><input type="text"  name="入院診斷" size="100"></th>
 	</tr>
     
   <tr>
-  	<th>入院日期(必填)</th>
-	<th><input type="date" required="required" name="入院日期"></th>
+  	<th>入院日期</th>
+	<th><input type="date"  name="入院日期"></th>
   </tr>
    
   <tr>
-  	<th>飲食醫囑(必填)</th>
-	<th><input type="text" required="required" name="飲食醫囑" size="100"></th>
+  	<th>飲食醫囑</th>
+	<th><input type="text"  name="飲食醫囑" size="100"></th>
   </tr>
   
   <tr>
-  	<th>個人史(必填)</th>
-	<th><input type="text" required="required" name="個人史" size="100"></th>
+  	<th>個人史</th>
+	<th><input type="text"  name="個人史" size="100"></th>
   </tr>
   
   <tr>
-  	<th>身高 / 體重(必填)</th>
-	<th><input type="text" required="required" name="身高 / 體重" size="100">KH</th>
+  	<th>身高 / 體重</th>
+	<th><input type="text"  name="身高 / 體重" size="100">KH</th>
 	</tr>
 	 
   <tr>
-	<th>體重變化 +/- (必填)</th>
-	<th><input type="text" required="required" name="體重變化" size="100">公斤</th>
+	<th>體重變化 +/- </th>
+	<th><input type="text"  name="體重變化" size="100">公斤</th>
   </tr>
  
 </table>	
