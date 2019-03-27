@@ -1,218 +1,42 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<body background="https://st2.depositphotos.com/5589482/10427/i/950/depositphotos_104274752-stock-photo-light-blue-paper-texture-for.jpg" >
-    <title>網一作業3 JS 初體驗</title>
- 
-</head>
-<body ">
-    <form id="orderForm1" action="http://203.64.84.113/x/RQ_RS.aspx" method="post"  name="form1" >
-     
-	 <p style="background-color:#FFF8DC;font-family:courier;text-align:center;font-size:100%">MI4A  104316113  李孟庭 網一作業3</p>
- <img src="https://www.crazyvector.com/wp-content/uploads/2018/11/Medical-colorful-icons.jpg" width="150" height="100"style="float:right;"/>
- <h3><p style="color:		#D02090">臺北市立聯合醫院 </h3>
-<select size="1" name="院區">
-            <option>中興-院本部</option>
-            <option>忠孝</option>
-            <option>仁愛</option>
-            <option>陽明</option>
-			<option>松德</option>
-            <option>和平婦幼</option>
-			<option>林森中醫昆明</option>
-            </select>
-<h3><p style="color:		#D02090">院區 </h3>	
-	<h2><p style="color:	#8B0000;text-align:center">住院營養照護病例紀錄表(N)</h2>
- <h4><p style="color:	#800000;text-align:center">營養評估 </h4>
-	
-	<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 80%;
-}
-td, th {
-  border: 5px solid 	#0000FF;
-  text-align: left;
-  padding: 15px;
-}
-tr:nth-child(even) {
-  background-color: #7FFFD4;
-}
-</style>
-<table>
-<tr>
-	<th>姓名(必填)</th>
-	<th><input type="text" required="required" name="姓名" value="請填寫"onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
+	<body>
+<form id="form1" name="form1" method="post" action="" onclick="return false">
+  <p>姓名：
+    <input type="text" name="name" id="name" />
+  </p>
+  <p>電話：
+    <input type="text" name="phone" id="phone" />
+  </p>
+  <p>地址：
+    <input type="text" name="address" id="address" />
+  </p>
+  <p>
+    <input type="submit" name="button" id="button" value="送出" />
+  </p>
+</form>
+</body>
 
-onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"> </th>
-	</tr>
- 
 
- 
-<tr>
-	<th>緊急連絡電話(必填)</th>
-	<th><input type="text" required="required" name="電話" size="100"></th>
-	</tr>	
-	
-  <tr>
-	<th>入院診斷(必填)</th>
-	<th><input type="text" required="required" name="入院診斷" size="100"></th>
-	</tr>
-    
-  <tr>
-  	<th>入院日期(必填)</th>
-	<th><input type="date" required="required" name="入院日期"></th>
-  </tr>
-   
-  <tr>
-  	<th>飲食醫囑(必填)</th>
-	<th><input type="text" required="required" name="飲食醫囑" size="100"></th>
-  </tr>
-  
-  <tr>
-  	<th>個人史(必填)</th>
-	<th><input type="text" required="required" name="個人史" size="100"></th>
-  </tr>
-  
-  <tr>
-  	<th>身高 / 體重(必填)</th>
-	<th><input type="text" required="required" name="身高 / 體重" size="100">KH</th>
-	</tr>
-	 
-  <tr>
-	<th>體重變化 +/- (必填)</th>
-	<th><input type="text" required="required" name="體重變化" size="100">公斤</th>
-  </tr>
- 
-</table>	
-<br> <br>	
-<br>營養知識 <br>
-	    <FONT size="3"><INPUT id="Radio1" type="radio" CHECKED value="y" name="差">佳
-							<INPUT id="Radio1" type="radio" value="n" name="差">差 </FONT>
- <br>活動表徵 <br>
-	<input type="checkbox" name="臥床">臥床
-	<input type="checkbox" name="可活動" >可活動
-	<input type="checkbox" name="水腫" >水腫
-	<input type="checkbox" name="痔瘡" >痔瘡
-	<br>
-        其它：<input type="text"  name="其它" size="20"><br />
-		<br>
-		
-		
-		<br>身體功能 <br>
-	<input type="checkbox" name="咀嚼">咀嚼
-	<input type="checkbox" name="吞嚥" >吞嚥
-	<input type="checkbox" name="胃 排空〈消化〉" >胃 排空〈消化〉
-	<input type="checkbox" name="腹脹" >腹脹
-		<input type="checkbox" name="便祕" >便祕
-		<input type="checkbox" name="腹瀉" >腹瀉
-	<br>
-        其它：<input type="text"  name="其它" size="20"><br />
-		<br>
-  <br>給食途徑及方法 <br>
-	<input type="checkbox" name="ORAL">ORAL
-	<input type="checkbox" name="NG" >NG
-	<input type="checkbox" name="ND" >ND
-	<input type="checkbox" name="胃造口" >胃造口
-		<input type="checkbox" name="批式" >批式
-		<input type="checkbox" name="重力" >重力
-		<input type="checkbox" name="連續" >連續
-	<br>
-        速度：<input type="text"  name="速度" size="20">cc/hr<br />
-		<br>
-		
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-td, th {
-  border: 1px solid 	#FFFFF0;
-  text-align: left;
-  padding: 8px;
-}
-tr:nth-child(even) {
-  background-color: #FAFAD2;
-}
-</style>
-<h3 style="color:#B22222">藥物摘要</h3>
-</FONT></p>
-<table>
-</tr>
- 
-  <tr>
-	<th><input type="text"  name="藥物摘要1" size="110"></th>
-  </tr>
-  <tr>
-  	<th><input type="text"  name="藥物摘要2" size="110"></th>
-  </tr>
-  
-  <tr>
-  	<th><input type="text"  name="藥物摘要3" size="110"></th>
-  </tr><tr>
-  	<th><input type="text"  name="藥物摘要4" size="110"></th>
-  </tr><tr>
-  	<th><input type="text"  name="藥物摘要5" size="110"></th>
-  </tr>
-</table>		
-<h3 style="color:#B22222">檢驗摘要</h3>
-</FONT></p>
-<table>
-</tr> 
-	<th><input type="date" name="檢驗摘要日期1"><input type="text"  name="name" size="85"></th>
-  </tr>
-  <tr>
-  	<th><input type="date" name="檢驗摘要日期2"><input type="text"  name="name" size="85"></th>
-  </tr>
-  
-  <tr>
-  	<th><input type="date" name="檢驗摘要日期3"><input type="text"  name="name" size="85"></th>
-  </tr><tr>
-  	<th><input type="date" name="檢驗摘要日期4"><input type="text"  name="name" size="85"></th>
-  </tr><tr>
-  	<th><input type="date" name="檢驗摘要日期5"><input type="text"  name="name" size="85"></th>
-  </tr>
-</table>
-<h3 style="color:#B22222">營養診斷</h3>
-</FONT></p>
-<table>
-</tr>
- 
-  <tr>
-  <th>P</th>
-	<th><input type="text"  name="營養診斷1" size="100"></th>
-  </tr>
-  <tr>
-  <th>E</th>
-  	<th><input type="text"  name="營養診斷2" size="100"></th>
-  </tr>
-  <tr>
-  <th>S</th> 
-  	<th><input type="text"  name="營養診斷3" size="100"></th>
-  </tr>
-</table>		
-								
-	<h3><p style="color:	#FF6347">訪視時間(必填) </h>	
-	<input type="date" required="required" name="訪視日期">	
-         
-        <html>
-<head>
-<script type="text/javascript">
-function disp_alert()
-{
-alert("確認將表單送出嗎?")
-}
+<script>
+ $(document).ready(function(){
+    $("#button").click(function(){
+        if($("#name").val()==""){
+            alert("你尚未填寫姓名");
+            eval("document.form1['name'].focus()");       
+        }else if($("#phone").val()==""){
+            alert("你尚未填寫電話");
+            eval("document.form1['phone'].focus()");    
+        }else if($("#address").val()==""){
+            alert("你尚未填寫地址");
+            eval("document.form1['address'].focus()");       
+        }else{
+            document.form1.submit();
+        }
+    })
+ })
 </script>
 </head>
-<body>
-<button type="submit"value="sssss" style="height: 30px; width: 103px"onclick="disp_alert()" value="output" />送出表單</button>
 
-</body>
-</html>
-         
-        </form>
-		
-		 <a href="http://keeper107.pixnet.net/blog/post/104070697-%E7%87%9F%E9%A4%8A%E8%A8%BA%E6%96%B7%E8%9E%8D%E5%85%A5%E7%87%9F%E9%A4%8A%E7%85%A7%E8%AD%B7%E6%B5%81%E7%A8%8B%E7%9A%84%E6%A8%A1%E5%BC%8F">此作業 表單來源</a>
- </body>
 </html>
