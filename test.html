@@ -39,51 +39,43 @@ tr:nth-child(even) {
   background-color: #7FFFD4;
 }
 </style>
-
 <table>
 <tr>
+	<th>姓名(必填)</th>
+	<th><input type="text" required="required" name="姓名" value="請填寫"onFocus="if(value==defaultValue){value='';this.style.color='#000'}"
 
-	<th>姓名 (必填)</th>
-
-	<th><input name="姓名" id="姓名" type="text" required /></th>
-
+onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"> </th>
 	</tr>
  
+
+ 
 <tr>
-	<th>連絡電話 - 室內電話 (必填)</th>
-	<th><input name="室內電話" id="mobile" pattern=’\d{4}[-]\d{6}’ required /></th>
+	<th>緊急連絡電話(必填)</th>
+	<th><input type="text" required="required" name="電話" size="100"></th>
 	</tr>	
-	
-	
-<tr>
-	<th>連絡電話 - 手機號碼 (必填)</th>
-	<th><input name="手機號碼" id="mobile" pattern=’\d{4}[-]\d{6}’ required /></th>
-	</tr>	
-	
-	
 	
   <tr>
-	<th>入院診斷 (必填)</th>
+	<th>入院診斷(必填)</th>
 	<th><input type="text" required="required" name="入院診斷" size="100"></th>
 	</tr>
     
   <tr>
-  	<th>入院日期 (必填)</th>
+  	<th>入院日期(必填)</th>
 	<th><input type="date" required="required" name="入院日期"></th>
   </tr>
    
   <tr>
-  	<th>飲食醫囑 (必填)</th>
+  	<th>飲食醫囑(必填)</th>
 	<th><input type="text" required="required" name="飲食醫囑" size="100"></th>
   </tr>
   
   <tr>
-  	<th>個人史 (必填)</th>
+  	<th>個人史(必填)</th>
 	<th><input type="text" required="required" name="個人史" size="100"></th>
   </tr>
   
   <tr>
-  	<th>身高 / 體重 (必填)</th>
+  	<th>身高 / 體重(必填)</th>
 	<th><input type="text" required="required" name="身高 / 體重" size="100">KH</th>
 	</tr>
 	 
@@ -93,12 +85,6 @@ tr:nth-child(even) {
   </tr>
  
 </table>	
-</form>
-</body>
-
-
-
-
 <br> <br>	
 <br>營養知識 <br>
 	    <FONT size="3"><INPUT id="Radio1" type="radio" CHECKED value="y" name="差">佳
@@ -215,27 +201,13 @@ tr:nth-child(even) {
 <script type="text/javascript">
 function disp_alert()
 {
-if(reg.姓名.value=="")
-alert("未輸入姓名")
-
+alert("確認將表單送出嗎?")
 }
 </script>
-
-
 </head>
 <body>
 <button type="submit"value="sssss" style="height: 30px; width: 103px"onclick="disp_alert()" value="output" />送出表單</button>
 </button>
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
          
