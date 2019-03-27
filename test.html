@@ -50,14 +50,14 @@ tr:nth-child(even) {
 <tr>
 	
 	<th>手機號碼</th>
-	<th><input type=”text” onkeyup=”value=value.replace(/[^\d]/g,”) “onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^\d]/g,”))” required="required" /></th>
+	<th><input type=”text” onkeypress='return event.charCode >= 48 && event.charCode <= 57'></th>
 
 	</tr>
  
 	
   <tr>
 	<th>入院診斷</th>
-	<th><input type="text" required="required" name="入院診斷" size="100"></th>
+	<th><input type="text" name="入院診斷" size="100"></th>
 	</tr>
     
   <tr>
