@@ -50,7 +50,7 @@ tr:nth-child(even) {
 <tr>
 	
 	<th>手機號碼</th>
-	<th><input type=”text” onkeypress='return event.charCode >= 48 && event.charCode <= 57'></th>
+	<th><input type=”text” oninvalid="alert('手機未填!!!');" name="手機號碼" required onkeypress='return event.charCode >= 48 && event.charCode <= 57' ></th>
 
 	</tr>
  
