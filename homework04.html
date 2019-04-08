@@ -75,6 +75,53 @@ tr:nth-child(even) {
   <tr>
   	<th>身高 / 體重</th>
 	<th><input type="text"  name="身高 / 體重" size="100">KH</th>
+	<script>
+function getBmi(){
+var t = $("#tall").val();
+var w = $("#weight").val();
+if(isNaN(t)){
+alert("身高只能是數字!");
+//清空字串
+tall.value=""; 
+}
+else if(isNaN(w)){
+alert("體重只能是數字!");
+//清空字串
+weight.value="";
+}else{ 
+t = parseFloat(t) / 100;
+w = parseFloat(w)
+var bmi = w / (t*t);
+//取小數點後 2 位數
+bmi = bmi.toFixed(2);
+alert(" 身高 " + t +"公尺!"+" 體重 "+ w +"公斤!"+"\n BMI = "+bmi);
+}
+}
+</script>
+</head>
+
+<body>
+<p>
+<label for="tall">身高:</label>
+<input name="tall" type="text" id="tall" size="10">
+公分</p>
+<p>體重:
+<input name="weight" type="text" id="weight" size="10">
+公斤</p>
+<p>
+<input type="submit" name="submit" id="submit" value="計算BMI" onClick="getBmi()">
+</p>
+<p>&nbsp;</p>
+</body>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	</tr>
 	 
   <tr>
