@@ -8,7 +8,7 @@
 <body ">
     <form id="orderForm1" action="http://203.64.84.113/x/RQ_RS.aspx" method="post"  name="form1" >
      
-	 <p style="background-color:#FFF8DC;font-family:courier;text-align:center;font-size:100%">MI4A  104316113  李孟庭 網一作業3</p>
+	 <p style="background-color:#FFF8DC;font-family:courier;text-align:center;font-size:100%">MI4A  104316113  李孟庭 網一作業4</p>
  <img src="https://www.crazyvector.com/wp-content/uploads/2018/11/Medical-colorful-icons.jpg" width="150" height="100"style="float:right;"/>
  <h3><p style="color:		#D02090">臺北市立聯合醫院 </h3>
 <select size="1" name="院區">
@@ -70,65 +70,6 @@ tr:nth-child(even) {
   <tr>
   	<th>個人史</th>
 	<th><input type="text"  name="個人史" size="100"></th>
-  </tr>
-  
-  <tr>
-  	<th>身高 / 體重</th>
-	<th><input type="text"  name="身高 / 體重" size="100">KH</th>
-	<script>
-function getBmi(){
-var t = $("#tall").val();
-var w = $("#weight").val();
-if(isNaN(t)){
-alert("身高只能是數字!");
-//清空字串
-tall.value=""; 
-}
-else if(isNaN(w)){
-alert("體重只能是數字!");
-//清空字串
-weight.value="";
-}else{ 
-t = parseFloat(t) / 100;
-w = parseFloat(w)
-var bmi = w / (t*t);
-//取小數點後 2 位數
-bmi = bmi.toFixed(2);
-alert(" 身高 " + t +"公尺!"+" 體重 "+ w +"公斤!"+"\n BMI = "+bmi);
-}
-}
-</script>
-</head>
-
-<body>
-<p>
-<label for="tall">身高:</label>
-<input name="tall" type="text" id="tall" size="10">
-公分</p>
-<p>體重:
-<input name="weight" type="text" id="weight" size="10">
-公斤</p>
-<p>
-<input type="submit" name="submit" id="submit" value="計算BMI" onClick="getBmi()">
-</p>
-<p>&nbsp;</p>
-</body>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	</tr>
-	 
-  <tr>
-	<th>體重變化 +/- </th>
-	<th><input type="text"  name="體重變化" size="100">公斤</th>
-  </tr>
- 
 </table>	
 <br> <br>	
 <br>營養知識 <br>
@@ -243,6 +184,93 @@ tr:nth-child(even) {
          
         <html>
 <head>
+
+
+
+
+
+
+
+
+<script>
+function f1() {
+    var h = document.getElementById("height").value;
+    var w = document.getElementById("weight").value;
+    var g = document.getElementById("gender").value;
+    //alert(h + w + g);
+    var bmi = w /((h*0.01)*(h*0.01));
+    var upperW = 24*((h*0.01)*(h*0.01));
+    var lowerW = 18.5*((h*0.01)*(h*0.01));
+    //alert(bmi);
+	if(isNaN(h)){
+alert("身高只能是數字!請重新輸入!");
+//清空字串
+h = document.getElementById("height").value=""; 
+}
+else if(isNaN(w)){
+alert("體重只能是數字!請重新輸入!");
+//清空字串
+document.getElementById("weight").value="";
+}
+	
+	
+    if(bmi <= 18.5){
+      document.getElementById("result").innerHTML = "<br><br>BMI = " + bmi.toFixed(2) +" <br>過輕,你需要增加 " + (lowerW-w).toFixed(0) + " 公斤";
+    }
+    	else if(bmi <= 24){
+      		 document.getElementById("result").innerHTML = "<br><br>BMI = " + bmi.toFixed(2) +" <br>標準體重，請繼續保持! " ;
+    			if(g=="male"){
+      			document.getElementById("pic").innerHTML = "<img src = 'http://lookatmenet.altervista.org/gallery/albums/tom-cruise-e-come-il-vino-rosso-piu-invecchia-piu-e-buono/tom-cruise-tom-cruise-18576235-1280-960.jpg'  height='300'>";
+      		}
+     			 else if(g=="female"){
+      	document.getElementById("pic").innerHTML = "<img src = 'http://static.comicvine.com/uploads/original/6/68345/2955748-emma-watson3bz91f.jpg'  height='300'>";
+      		}
+      		else{
+      	document.getElementById("pic").innerHTML = ""
+      		}
+    }
+    else if(bmi <= 27){
+      document.getElementById("result").innerHTML = "<br><br>BMI = " + bmi.toFixed(2) +" <br>過重,你需要減重 " + (w-upperW).toFixed(0) + " 公斤";
+    }
+   	else {
+    	document.getElementById("result").innerHTML = "<br><br>BMI = " + bmi.toFixed(2) +" <br>肥胖,你需要減重 " + (w-upperW).toFixed(0) + " 公斤";
+    }
+    
+}
+</script>
+
+<form action="javascript:f1();">
+  身高: <input type="text" id="height"><br>
+  體重: <input type="text" id="weight"><br>
+  性別:
+    <select id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+     </select>
+  <input type="submit" value="Submit">
+  <div id = result></div>
+  <div id = pic></div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/javascript">
 function disp_alert()
 {
